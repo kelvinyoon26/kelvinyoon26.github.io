@@ -17,12 +17,13 @@ As the lead analyst responsible for revenue prediction, my objective was to buil
 Document your work done to accomplish the outcome.
 
 I successfully:
-•	Conducted comprehensive exploratory data analysis (EDA) on a dataset of over 1 million movies
-•	Identified and removed post-release metrics (e.g., vote_average, IMDB_Rating) to prevent data leakage
-•	Engineered highly predictive features from complex fields like genres_list, Cast_list, Director, and Star1
-•	Built and evaluated four regression models: Linear Regression, Random Forest, Gradient Boosting, and XGBoost
-•	Performed what-if simulations to quantify the impact of key variables on revenue
-•	Delivered a robust, interpretable model with actionable recommendations
+ •	Conducted comprehensive exploratory data analysis (EDA) on a dataset of over 1 million movies
+ •	Identified and removed post-release metrics (e.g., vote_average, IMDB_Rating) to prevent data leakage
+ •	Engineered highly predictive features from complex fields like genres_list, Cast_list, Director, and Star1
+ •	Built and evaluated four regression models: Linear Regression, Random Forest, Gradient Boosting, and XGBoost
+ •	Performed what-if simulations to quantify the impact of key variables on revenue
+ •	Delivered a robust, interpretable model with actionable recommendations
+
 This work directly supports the team’s goal by providing a reliable tool for revenue estimation and strategic decision-making.
 
 
