@@ -27,7 +27,6 @@ This work directly supports the team’s goal by providing a reliable tool for r
 
 
 ### Data Preparation
-3. Data Preparation
 Dataset Overview
 •	Size: 1,072,255 rows × 42 columns
 •	Target Variable: revenue (box office earnings in USD)
@@ -67,22 +66,13 @@ Model Performance (Test Set)
 
  <img width="940" height="292" alt="image" src="https://github.com/user-attachments/assets/49445130-44af-4662-a551-f820c1009adf" />
   
-Linear Regression	2.030	1.345	0.896
-Random Forest	1.800	0.959	0.918
-Gradient Boosting	1.946	1.185	0.904
-XGBoost	1.842	1.042	0.914
-📌 Note: Metrics are on log-transformed revenue. Higher R² = better fit. 
-✅ Best Performer: Random Forest achieved the highest R² (0.918) and lowest RMSE/MAE — indicating strong generalization.
+Note: Metrics are on log-transformed revenue. Higher R² = better fit. 
+Best Performer: Random Forest achieved the highest R² (0.918) and lowest RMSE/MAE — indicating strong generalization.
 ________________________________________
 Actual vs Predicted Revenue (Sample)
 
  <img width="911" height="478" alt="image" src="https://github.com/user-attachments/assets/ef33da8e-4353-43d9-a7d2-43222a790217" />
  
-0	$376	$100
-1	$8	$8
-2	$183,632,568	$114,629,169
-3	$47,396,939	$75,100,000
-4	$22,630,364	$97,644,617
 While some predictions are off (e.g., #4), the model captures trends well, especially for mid-to-high-revenue films. 
 ________________________________________
 Feature Importance (Random Forest)
@@ -94,6 +84,7 @@ Key Insights:
 2.	director_target_enc is second (24.7%) — shows director reputation strongly impacts revenue
 3.	star1_target_enc (2.9%), runtime (1.9%), and budget_per_minute (1.7%) also contribute
 4.	Genre (genre_Comedy) and cast size have minor influence
+
 This confirms that budget and director success are the strongest drivers of revenue. 
 
 ## Recommendation and Analysis
