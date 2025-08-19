@@ -17,47 +17,47 @@ As the lead analyst responsible for revenue prediction, my objective was to buil
 Document your work done to accomplish the outcome.
 
 I successfully:
-* •	Conducted comprehensive exploratory data analysis (EDA) on a dataset of over 1 million movies
-* •	Identified and removed post-release metrics (e.g., vote_average, IMDB_Rating) to prevent data leakage
-* •	Engineered highly predictive features from complex fields like genres_list, Cast_list, Director, and Star1
-* •	Built and evaluated four regression models: Linear Regression, Random Forest, Gradient Boosting, and XGBoost
-* •	Performed what-if simulations to quantify the impact of key variables on revenue
-* •	Delivered a robust, interpretable model with actionable recommendations
+* 	Conducted comprehensive exploratory data analysis (EDA) on a dataset of over 1 million movies
+* 	Identified and removed post-release metrics (e.g., vote_average, IMDB_Rating) to prevent data leakage
+* 	Engineered highly predictive features from complex fields like genres_list, Cast_list, Director, and Star1
+* 	Built and evaluated four regression models: Linear Regression, Random Forest, Gradient Boosting, and XGBoost
+* 	Performed what-if simulations to quantify the impact of key variables on revenue
+* 	Delivered a robust, interpretable model with actionable recommendations
 
 This work directly supports the team’s goal by providing a reliable tool for revenue estimation and strategic decision-making.
 
 
 ### Data Preparation
 Dataset Overview
-•	Size: 1,072,255 rows × 42 columns
-•	Target Variable: revenue (box office earnings in USD)
-•	Key Challenges:
-•	High cardinality in Director, Star1, production_companies
-•	Skewed distributions in revenue and budget
-•	Missing values in IMDB_Rating, Meta_score, etc.
+*	Size: 1,072,255 rows × 42 columns
+*	Target Variable: revenue (box office earnings in USD)
+*	Key Challenges:
+*	High cardinality in Director, Star1, production_companies
+*	Skewed distributions in revenue and budget
+*	Missing values in IMDB_Rating, Meta_score, etc.
 Preprocessing Steps
 1.	Filtered Data:
-•	Removed movies with revenue ≤ 0 or budget ≤ 0
-•	Kept only movies with valid runtime, release_year, and non-null key features
+*	Removed movies with revenue ≤ 0 or budget ≤ 0
+*	Kept only movies with valid runtime, release_year, and non-null key features
 2.	Log Transformation:
-•	Applied np.log1p() to revenue and budget to normalize skewed distributions
+*	Applied np.log1p() to revenue and budget to normalize skewed distributions
 3.	Feature Engineering:
-•	Genres: One-hot encoded top 10 genres (e.g., Action, Drama)
-•	Production: Created is_us, num_languages, is_english
-•	Cast: Engineered cast_size, star_power, and avg_cast_revenue (target-encoded)
-•	Director & Star1: Used target encoding after replacing 'Unknown' with placeholders
-•	Budget Efficiency: Added budget_per_minute = log(budget) - log(runtime)
-•	Release Timing: Extracted release_month, release_dayofweek
+*	Genres: One-hot encoded top 10 genres (e.g., Action, Drama)
+*	Production: Created is_us, num_languages, is_english
+*	Cast: Engineered cast_size, star_power, and avg_cast_revenue (target-encoded)
+*	Director & Star1: Used target encoding after replacing 'Unknown' with placeholders
+*	Budget Efficiency: Added budget_per_minute = log(budget) - log(runtime)
+*	Release Timing: Extracted release_month, release_dayofweek
 4.	Removed Leaky Features:
-•	Excluded: vote_average, IMDB_Rating, popularity, tagline, homepage, etc.
+*	Excluded: vote_average, IMDB_Rating, popularity, tagline, homepage, etc.
 
 ### Modelling
 Models Trained
 Four regression models were compared:
-•	Linear Regression – Baseline
-•	Random Forest Regressor
-•	Gradient Boosting Regressor
-•	XGBoost Regressor
+*	Linear Regression – Baseline
+*	Random Forest Regressor
+*	Gradient Boosting Regressor
+*	XGBoost Regressor
 All models used 80% training / 20% testing split and were trained on the same preprocessed feature set.
 
 
@@ -94,14 +94,14 @@ Explain the analysis and recommendations
 Recommended Model
 Random Forest Regressor is the best-performing model and should be used for deployment. 
 Despite Linear Regression's simplicity, Random Forest outperforms across all metrics, offering:
-•	Higher R² (0.918)
-•	Lower RMSE and MAE
-•	Better handling of non-linear relationships
+*	Higher R² (0.918)
+*	Lower RMSE and MAE
+*	Better handling of non-linear relationships
 ________________________________________
 What-If Simulations (Based on Base Case)
 A representative base case movie was created using the mean of test set features:
-•	Predicted Revenue: $25,345
-•	Features: Average budget, runtime, genre, director, star, release timing
+*	Predicted Revenue: $25,345
+*	Features: Average budget, runtime, genre, director, star, release timing
 We simulated changes to evaluate their impact:
 			
 +10% log-budget	$27,670	+$2,324	+9.17%
@@ -112,46 +112,46 @@ Key Insight: A 10% increase in log-transformed budget had the largest positive i
 Explanation of Analysis and Recommendations
 Why Budget Matters Most
 The model shows that increasing budget has the strongest effect on predicted revenue. This aligns with industry knowledge:
-•	Higher budgets → more marketing, better VFX, bigger casts
-•	Studios can use this insight to justify strategic spending on high-potential films
+*	Higher budgets → more marketing, better VFX, bigger casts
+*	Studios can use this insight to justify strategic spending on high-potential films
 Genre Impact
 Adding the 'Action' genre increased revenue by 6.94%, confirming its broad appeal. This suggests:
-•	Action films have strong global marketability
-•	Marketing campaigns should emphasize action elements
+*	Action films have strong global marketability
+*	Marketing campaigns should emphasize action elements
 Release Month Has Minimal Effect
 Changing release month to July resulted in only 0.04% increase, indicating:
-•	Release timing is less impactful than budget or cast
-•	Other factors (e.g., competition, holidays) may dominate
+*	Release timing is less impactful than budget or cast
+*	Other factors (e.g., competition, holidays) may dominate
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
 
 While the model provides valuable insights, we must consider ethical implications:
 Bias and Fairness
-•	The model favors Hollywood-centric features (US production, English language), which may undervalue international or indie films
-•	Actors and directors from underrepresented regions may be penalized due to lower historical revenue (a systemic bias)
+*	The model favors Hollywood-centric features (US production, English language), which may undervalue international or indie films
+*	Actors and directors from underrepresented regions may be penalized due to lower historical revenue (a systemic bias)
 Transparency
-•	Random Forest is less interpretable than Linear Regression — but we used feature importance to explain predictions
-•	Avoided black-box models without explanation
+*	Random Forest is less interpretable than Linear Regression — but we used feature importance to explain predictions
+*	Avoided black-box models without explanation
 Data Leakage Prevention
-•	Strictly excluded post-release metrics like popularity, IMDB_Rating, and vote_average
-•	Ensured all features are available before release
+*	Strictly excluded post-release metrics like popularity, IMDB_Rating, and vote_average
+*	Ensured all features are available before release
 Responsible Use
-•	The model should support, not replace, human judgment
-•	Predictions should not be used to discriminate against filmmakers from non-English or non-US backgrounds
-•	Regular audits should be conducted to detect drift or bias over time
+*	The model should support, not replace, human judgment
+*	Predictions should not be used to discriminate against filmmakers from non-English or non-US backgrounds
+*	Regular audits should be conducted to detect drift or bias over time
 
 ## Conclusion
 We built a high-performance model to predict box office revenue using pre-release features only. Random Forest achieved strong accuracy and generalization.
 Recommendation: Deploy Random Forest in a decision-support dashboard for studios. This enables:
-• Revenue forecasting for new projects
-• Scenario testing (budget, cast, genre)
-• Data-driven investment planning
+* Revenue forecasting for new projects
+* Scenario testing (budget, cast, genre)
+* Data-driven investment planning
 
 Future work:
-• Explore feature interactions (budget + genre)
-• Use deep learning for script sentiment analysis
-• Add real-time updates for market trends
+* Explore feature interactions (budget + genre)
+* Use deep learning for script sentiment analysis
+* Add real-time updates for market trends
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
