@@ -135,34 +135,44 @@ This aligns with industry knowledge:
 This provides a clear, data-backed strategy for studios.
 
 ## AI Ethics
-Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
-
+ 
 While the model provides valuable insights, we must consider ethical implications:  
-##### Bias and Fairness
+
+##### Privacy
+* The dataset used contains publicly available metadata about movies (e.g., director, cast, genre, budget) sourced from platforms like TMDB and IMDb.
+* No personal or sensitive user data (e.g., audience demographics, viewing habits, or private financial records) was used.
+* All features are aggregated at the movie level, not individual level, minimizing privacy risks.
+Therefore, privacy concerns are low in this context.
+##### Fairness
+The model may systematically favor certain groups due to historical biases in the data:
 *	The model favors Hollywood-centric features (US production, English language), which may undervalue international or indie films
-*	Actors and directors from underrepresented regions may be penalized due to lower historical revenue (a systemic bias)  
-Transparency
-*	Random Forest is less interpretable than Linear Regression — but we used feature importance to explain predictions
-*	Avoided black-box models without explanation  
-Data Leakage Prevention
-*	Strictly excluded post-release metrics like popularity, IMDB_Rating, and vote_average
-*	Ensured all features are available before release  
-Responsible Use
-*	The model should support, not replace, human judgment
-*	Predictions should not be used to discriminate against filmmakers from non-English or non-US backgrounds
-*	Regular audits should be conducted to detect drift or bias over time
+*	Actors and directors from underrepresented regions may be penalized due to lower historical revenue (a systemic bias)    
+* This could perpetuate a cycle where studios continue to invest only in "proven" (i.e., Western, male, English-speaking) talent, reinforcing existing disparities.  
+* To mitigate this, stakeholders should use the model as a decision-support tool, not a gatekeeper, and actively consider diverse voices in greenlighting decisions.
+##### Accuracy
+* The Random Forest model achieves an R² of 0.918 on the test set, indicating high predictive accuracy. However, accuracy does not imply truth as the model reflects historical patterns, including market inefficiencies and biases.
+* Predictions for low-budget, international, or niche films may be less accurate due to sparse data.
 
-## Conclusion
-We built a high-performance model to predict box office revenue using pre-release features only. Random Forest achieved strong accuracy and generalization.
-Recommendation: Deploy Random Forest in a decision-support dashboard for studios. This enables:
-* Revenue forecasting for new projects
-* Scenario testing (budget, cast, genre)
-* Data-driven investment planning
+##### Accountability
+* The team maintains full documentation of data sources, preprocessing steps, model selection, and assumptions.
+* A time-based train-test split was used to simulate real-world forecasting, ensuring the model is evaluated fairly and its performance reflects realistic deployment conditions.
+* If the model is used to deny funding to a film, there must be a human-in-the-loop to review and justify the decision as the model does not make final decisions.
+* Regular audits and retraining should be conducted to ensure the model remains fair and accurate as market trends evolve.
+##### Transparency
+* The feature engineering process is fully documented, including how director_target_enc and star1_target_enc were created using cross-validated target encoding to prevent leakage.
+* Feature importance analysis (top 3: log_budget, director_target_enc, star1_target_enc) provides insight into what drives predictions.
+* An interactive ipywidget interface was developed to allow users to simulate changes and understand model behavior — promoting interpretability.
+However, Random Forest is not fully interpretable like linear models. Therefore, we emphasize global explanations over individual predictions and avoid presenting results as infallible.
 
-Future work:
-* Explore feature interactions (budget + genre)
-* Use deep learning for script sentiment analysis
-* Add real-time updates for market trends
+
+## Conclusion  
+This project successfully developed a model to predict box office revenue using pre-release features. By leveraging feature engineering and avoiding data leakage, We built a tool that can guide budgeting and marketing strategies to increase revenue by 5% or more.
+
+The final recommendation is to deploy the Random Forest model in a decision-support dashboard, enabling studios to:
+
+Simulate outcomes for new projects
+Compare scripts based on cast, genre, director and budget
+Optimize investments with data-backed confidence
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
