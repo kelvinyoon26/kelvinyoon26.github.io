@@ -57,7 +57,7 @@ Four regression models were compared:
 *	Linear Regression – Baseline
 *	Random Forest Regressor
 *	Gradient Boosting Regressor
-*	XGBoost Regressor
+*	XGBoost Regressor  
 All models used 80% training / 20% testing split and were trained on the same preprocessed feature set.
 
 
