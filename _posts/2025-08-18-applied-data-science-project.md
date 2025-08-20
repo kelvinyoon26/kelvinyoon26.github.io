@@ -79,10 +79,9 @@ Note: Metrics are on log-transformed revenue. Higher R² = better fit.
 Best Performer: Random Forest achieved the highest R² (0.918) and lowest RMSE/MAE — indicating strong generalization.
 ________________________________________
 Actual vs Predicted Revenue (Sample)
-
- <img width="911" height="478" alt="image" src="https://github.com/user-attachments/assets/ef33da8e-4353-43d9-a7d2-43222a790217" />
+<img width="1431" height="874" alt="image" src="https://github.com/user-attachments/assets/77c76039-21a1-4c74-97eb-f10d0348440b" />
  
-While some predictions are off (e.g., #4), the model captures trends well, especially for mid-to-high-revenue films. 
+The model captures trends well, especially for mid-to-high-revenue films. 
 ________________________________________
 Feature Importance (Random Forest)
  
