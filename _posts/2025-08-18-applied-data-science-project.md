@@ -137,16 +137,16 @@ This provides a clear, data-backed strategy for studios.
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
 
-While the model provides valuable insights, we must consider ethical implications:
-Bias and Fairness
+While the model provides valuable insights, we must consider ethical implications:  
+##### Bias and Fairness
 *	The model favors Hollywood-centric features (US production, English language), which may undervalue international or indie films
-*	Actors and directors from underrepresented regions may be penalized due to lower historical revenue (a systemic bias)
+*	Actors and directors from underrepresented regions may be penalized due to lower historical revenue (a systemic bias)  
 Transparency
 *	Random Forest is less interpretable than Linear Regression — but we used feature importance to explain predictions
-*	Avoided black-box models without explanation
+*	Avoided black-box models without explanation  
 Data Leakage Prevention
 *	Strictly excluded post-release metrics like popularity, IMDB_Rating, and vote_average
-*	Ensured all features are available before release
+*	Ensured all features are available before release  
 Responsible Use
 *	The model should support, not replace, human judgment
 *	Predictions should not be used to discriminate against filmmakers from non-English or non-US backgrounds
