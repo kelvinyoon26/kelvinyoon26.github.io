@@ -108,7 +108,7 @@ ________________________________________
 
 We simulated changes to evaluate their impact:
 A base case movie was created using the mean of test set features:
-* Predicted Revenue: $32,296
+* Predicted Revenue: $32,296  
 We simulated changes to evaluate their impact:
   <img width="940" height="466" alt="image" src="https://github.com/user-attachments/assets/a7eab7ae-ee1c-4bdd-a549-9c464921157b" />
  
