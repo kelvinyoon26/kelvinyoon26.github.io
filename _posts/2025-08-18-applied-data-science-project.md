@@ -54,13 +54,18 @@ Preprocessing Steps
 *	Excluded: vote_average, IMDB_Rating, popularity, tagline, homepage, etc.
 
 ### Modelling
+Time-Based Train-Test Split
+To simulate real-world forecasting:  
+<img width="1183" height="565" alt="image" src="https://github.com/user-attachments/assets/8811af5c-3588-496f-ab5e-944e3819d140" />
+* Ensures no future data leaks into training
+* Models learn from past to predict future — just like in production
 Models Trained
 Four regression models were compared:
 *	Linear Regression – Baseline
 *	Random Forest Regressor
 *	Gradient Boosting Regressor
 *	XGBoost Regressor  
-All models used 80% training / 20% testing split and were trained on the same preprocessed feature set.
+All models used 80% training / 20% testing split and were trained on the same preprocessed 28 features.
 
 
 ### Evaluation
