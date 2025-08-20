@@ -128,10 +128,10 @@ This aligns with industry knowledge:
   Release month has negligible impact — suggests timing is less critical than content and budget
 
   
-# To achieve the 5% revenue increase goal:
+### To achieve the 5% revenue increase goal:
 
-Increase budget by just 1.5–2% → likely to yield >5% revenue gain
-Combine with Action genre or strong director for amplified effect
+* Increase budget by just 1.5–2% → likely to yield >5% revenue gain
+* Combine with Action genre or strong director for amplified effect
 This provides a clear, data-backed strategy for studios.
 
 ## AI Ethics
