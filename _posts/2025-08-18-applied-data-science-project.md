@@ -114,19 +114,25 @@ We simulated changes to evaluate their impact:
  
 Key Insight: A 10% increase in log-transformed budget had the largest positive impact on revenue among all tested changes. Which meaning a 10% increase in budget leads to a 30.3% increase in predicted revenue which is far exceeding the 5% goal.  
 
-Explanation of Analysis and Recommendations
+## Explanation of Analysis and Recommendations
 Why Budget Matters Most
 The model shows that increasing budget has the strongest effect on predicted revenue. This aligns with industry knowledge:
-*	Higher budgets → more marketing, better VFX, bigger casts
-*	Studios can use this insight to justify strategic spending on high-potential films
-Genre Impact
-Adding the 'Action' genre increased revenue by 6.94%, confirming its broad appeal. This suggests:
-*	Action films have strong global marketability
-*	Marketing campaigns should emphasize action elements
-Release Month Has Minimal Effect
-Changing release month to July resulted in only 0.04% increase, indicating:
-*	Release timing is less impactful than budget or cast
-*	Other factors (e.g., competition, holidays) may dominate
+
+Higher budgets → more marketing, better VFX (visual effects), bigger casts
+Studios can use this insight to justify strategic spending on high-potential films
+Director and Star Impact
+Changing to a top-tier director (e.g., Christopher Nolan) increases revenue by 969% — but this reflects a jump from a weak base director
+In reality, director changes have large but bounded impact
+Still confirms: director reputation is second only to budget
+Genre and Release Timing
+Adding 'Action' genre boosts revenue by 8.1% — confirms its broad appeal
+Release month has negligible impact — suggests timing is less critical than content and budget
+Path to 5% Revenue Increase
+To achieve the 5% revenue increase goal:
+
+Increase budget by just 1.5–2% → likely to yield >5% revenue gain
+Combine with Action genre or strong director for amplified effect
+This provides a clear, data-backed strategy for studios.
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
