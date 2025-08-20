@@ -105,16 +105,14 @@ Despite Linear Regression's simplicity, Random Forest outperforms across all met
 *	Lower RMSE and MAE
 *	Better handling of non-linear relationships
 ________________________________________
-What-If Simulations (Based on Base Case)
-A representative base case movie was created using the mean of test set features:
-*	Predicted Revenue: $25,345
-*	Features: Average budget, runtime, genre, director, star, release timing
+
 We simulated changes to evaluate their impact:
-			
-+10% log-budget	$27,670	+$2,324	+9.17%
-Add 'Action' genre	$27,104	+$1,759	+6.94%
-Change release month to July	$25,355	+$10	+0.04%
-Key Insight: A 10% increase in log-transformed budget had the largest positive impact on revenue among all tested changes. 
+A base case movie was created using the mean of test set features:
+* Predicted Revenue: $32,296
+We simulated changes to evaluate their impact:
+  <img width="940" height="466" alt="image" src="https://github.com/user-attachments/assets/a7eab7ae-ee1c-4bdd-a549-9c464921157b" />
+ 
+Key Insight: A 10% increase in log-transformed budget had the largest positive impact on revenue among all tested changes. Which meaning a 10% increase in budget leads to a 30.3% increase in predicted revenue which is far exceeding the 5% goal.  
 
 Explanation of Analysis and Recommendations
 Why Budget Matters Most
