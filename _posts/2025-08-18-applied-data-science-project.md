@@ -41,21 +41,8 @@ Preprocessing Steps
 *	Kept only movies with valid runtime, release_year, and non-null key features
 2.	Log Transformation:
 *	Applied np.log1p() to revenue and budget to normalize skewed distributions
-3.	Feature Engineering:  
-	
-budget	log_budget,budget_per_minute
-runtime	runtime(kept as-is)
-release_date	release_year,release_month
-original_language	is_english(1 if English)
-production_companies	num_companies(count)
-production_countries	is_us(1 if US involved)
-spoken_languages	num_languages(count)
-adult	adult(kept)
-Director	director_target_enc(mean log_revenue, CV-encoded)
-Star1	star1_target_enc(mean log_revenue, CV-encoded)
-Cast_list	cast_size,star_power(count of top 100 actors)
-genres_list	One-hot encoded top 10 genres (e.g.,genre_Action,genre_Drama)
-all_combined_keywords	Binary flags:has_sequel,has_remake,has_superhero
+3.	Feature Engineering:
+<img width="1631" height="1102" alt="image" src="https://github.com/user-attachments/assets/e9af1649-5300-43f5-8149-5af97260908e" />
 
 *	Genres: One-hot encoded top 10 genres (e.g., Action, Drama)
 *	Production: Created is_us, num_languages, is_english
