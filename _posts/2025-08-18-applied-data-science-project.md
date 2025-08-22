@@ -17,11 +17,12 @@ My responsible for revenue prediction, was to build a machine learning model tha
 
 I successfully:
 * 	Conducted comprehensive exploratory data analysis on a dataset of over 1 million movies
-* 	Identified and removed post-release metrics (AverageRating, IMDB_Rating, Meta_score, , vote_average, vote_count,        popularity, overview_sentiment) to prevent data leakage
+* 	Identified and removed post-release metrics (AverageRating, IMDB_Rating, Meta_score, vote_average, vote_count,        popularity, overview_sentiment) to prevent data leakage
 * 	Engineered highly predictive features from complex fields like genres_list, Cast_list, Director, and Star1
 * 	Built and evaluated four regression models: Linear Regression, Random Forest, Gradient Boosting, and XGBoost
 * 	Performed what-if simulations to quantify the impact of key variables on revenue
-* 	Delivered a robust, interpretable model with actionable recommendations
+* 	Delivered a Random Forest model with reasonable prediction and recommendations
+* 	Using ipywidget to create a interative widget to allow users to adjust a few input to predict the revenue.
 
 This work directly supports the team’s goal by providing a reliable tool for revenue estimation and strategic decision-making.
 
@@ -41,8 +42,6 @@ Preprocessing Steps
 2.	Log Transformation:
 *	Applied np.log1p() to revenue and budget to normalize skewed distributions
 3.	Feature Engineering:
-<img width="1631" height="1102" alt="image" src="https://github.com/user-attachments/assets/e9af1649-5300-43f5-8149-5af97260908e" />
-
 *	Genres: One-hot encoded top 10 genres (e.g., Action, Drama)
 *	Production: Created is_us, num_languages, is_english
 *	Cast: Engineered cast_size, star_power, and avg_cast_revenue (target-encoded)
@@ -51,6 +50,9 @@ Preprocessing Steps
 *	Release Timing: Extracted release_month, release_dayofweek
 4.	Removed Leaky Features:
 *	Excluded: vote_average, IMDB_Rating, popularity, tagline, homepage, etc.
+
+###### Final Features for training
+<img width="1631" height="1102" alt="image" src="https://github.com/user-attachments/assets/e9af1649-5300-43f5-8149-5af97260908e" />
 
 ### Modelling
 Time-Based Train-Test Split
