@@ -5,20 +5,19 @@ title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
 ## Project Background
-Provide an overview of your team's project business goals and objectives and state the objective that you are working on. 
 
 The entertainment industry relies heavily on accurate revenue forecasting to guide production decisions, marketing strategies, and investment planning. With budgets reaching hundreds of millions of dollars, studios need data-driven tools to predict box office performance before release.
-Our team’s overall business goal is to predict box office revenue and increase it by 5% through strategic insights derived from historical movie data.
+Our team’s overall business goal is to predict box office revenue and increase it by 5% through strategic insights derived from historical movie data.  
+
 Individual Objective
-As the lead analyst responsible for revenue prediction, my objective was to build a machine learning model that estimates a movie’s box office earnings using only pre-release features — ensuring no data leakage and enabling real-world application.
+My responsible for revenue prediction, was to build a machine learning model that estimates a movie’s box office earnings using only pre-release features so to ensuring no data leakage and enabling real-world application.
 
 
 ## Work Accomplished
-Document your work done to accomplish the outcome.
 
 I successfully:
-* 	Conducted comprehensive exploratory data analysis (EDA) on a dataset of over 1 million movies
-* 	Identified and removed post-release metrics (e.g., vote_average, IMDB_Rating) to prevent data leakage
+* 	Conducted comprehensive exploratory data analysis on a dataset of over 1 million movies
+* 	Identified and removed post-release metrics (AverageRating, IMDB_Rating, Meta_score, , vote_average, vote_count,        popularity, overview_sentiment) to prevent data leakage
 * 	Engineered highly predictive features from complex fields like genres_list, Cast_list, Director, and Star1
 * 	Built and evaluated four regression models: Linear Regression, Random Forest, Gradient Boosting, and XGBoost
 * 	Performed what-if simulations to quantify the impact of key variables on revenue
