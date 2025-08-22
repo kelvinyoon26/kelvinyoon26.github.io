@@ -57,11 +57,10 @@ Preprocessing Steps
 ### Modelling
 Time-Based Train-Test Split  
 To simulate real-world forecasting:  
-<img width="1183" height="565" alt="image" src="https://github.com/user-attachments/assets/8811af5c-3588-496f-ab5e-944e3819d140" />
-  
+<img width="1183" height="565" alt="image" src="https://github.com/user-attachments/assets/8811af5c-3588-496f-ab5e-944e3819d140" />  
 Predict revenue for a new and upcoming movie using only data from movies released before it. Hence, the model should only train on older data, and test on newer data. This is to prevent time leakage: the model learns from future data to predict the past, which is unrealistic.
   
-###### Models Trained  
+##### Models Trained  
 Four regression models were compared:
 *	Linear Regression – Baseline
 *	Random Forest Regressor
@@ -77,14 +76,15 @@ Model Performance (Test Set)
  <img width="940" height="292" alt="image" src="https://github.com/user-attachments/assets/49445130-44af-4662-a551-f820c1009adf" />
   
 Note: Metrics are on log-transformed revenue. Higher R² = better fit. 
-Best Performer: Random Forest achieved the highest R² (0.918) and lowest RMSE/MAE — indicating strong generalization.
-________________________________________
+Best Performer: Random Forest achieved the highest R² (0.918) and lowest RMSE/MAE  
+
 Actual vs Predicted Revenue (Sample)
 <img width="1431" height="874" alt="image" src="https://github.com/user-attachments/assets/77c76039-21a1-4c74-97eb-f10d0348440b" />
+Refering to sample 2, Predicted Revenue $183,632,568 vs Actual Revenue $114,629,169 
  
 The model captures trends well, especially for mid-to-high-revenue films. 
-________________________________________
-Feature Importance (Random Forest)
+  
+#### Feature Importance (Random Forest)
  
 <img width="940" height="622" alt="image" src="https://github.com/user-attachments/assets/54186cdd-b705-460e-a20f-e25c0f9d1f83" />
 
