@@ -97,37 +97,34 @@ Key Insights:
 This confirms that budget and director success are the strongest drivers of revenue. 
 
 ## Recommendation and Analysis
-Explain the analysis and recommendations
 
-Recommended Model
+Recommended Model  
 Random Forest Regressor is the best-performing model and should be used for deployment. 
-Despite Linear Regression's simplicity, Random Forest outperforms across all metrics, offering:
+Despite Linear Regression's simplicity, Random Forest outperforms across all metrics with:
 *	Higher R² (0.918)
 *	Lower RMSE and MAE
-*	Better handling of non-linear relationships
-________________________________________
+*	Better handling of non-linear relationships   
 
-We simulated changes to evaluate their impact:
-A base case movie was created using the mean of test set features:
-* Predicted Revenue: $32,296  
-We simulated changes to evaluate their impact:
+To simulated changes to evaluate their impact:  
+A base case movie was created using the mean of test set features:  
+* Predicted Revenue: $32,296    
+
+Simulation result to evaluate the impact:
   <img width="940" height="466" alt="image" src="https://github.com/user-attachments/assets/a7eab7ae-ee1c-4bdd-a549-9c464921157b" />
  
 Key Insight: A 10% increase in log-transformed budget had the largest positive impact on revenue among all tested changes. Which meaning a 10% increase in budget leads to a 30.3% increase in predicted revenue which is far exceeding the 5% goal.  
 
 ## Explanation of Analysis and Recommendations
-Why Budget Matters Most  
 The model shows that increasing budget has the strongest effect on predicted revenue.  
-  
+Why Budget Matters Most    
 This aligns with industry knowledge:
-* Higher budgets → more marketing, better VFX (visual effects), bigger casts  
+* Higher budgets → more marketing, better VFX (visual effects), bigger casts can be deployed or recuited  
 * Studios can use this insight to justify strategic spending on high-potential films
 * Director and Star Impact  
   Changing to a top-tier director (e.g., Christopher Nolan) increases revenue by 969% but this reflects a jump from a weak     base director. In reality, director changes have large but bounded impact but still director reputation is second only to    budget
 * Genre and Release Timing  
   Adding 'Action' genre boosts revenue by 8.1% — confirms its broad appeal
   Release month has negligible impact — suggests timing is less critical than content and budget
-
   
 #### To achieve the 5% revenue increase goal:
 
@@ -137,19 +134,19 @@ This provides a clear, data-backed strategy for studios.
 
 ## AI Ethics
  
-While the model provides valuable insights, we must consider ethical implications:  
-
+While the model provides reasonable predication and valuable insights, we must consider ethical implications:  
+  
 ##### Privacy
-* The dataset used contains publicly available metadata about movies (e.g., director, cast, genre, budget) sourced from platforms like TMDB and IMDb.
+* The dataset used contains publicly available metadata about movies (e.g., director, cast, genre, budget) sourced from platforms Kaggle.
 * No personal or sensitive user data (e.g., audience demographics, viewing habits, or private financial records) was used.
 * All features are aggregated at the movie level, not individual level, minimizing privacy risks.
-Therefore, privacy concerns are low in this context.
+Therefore, privacy concerns are low in this context.  
 ##### Fairness
 The model may systematically favor certain groups due to historical biases in the data:
 *	The model favors Hollywood-centric features (US production, English language), which may undervalue international or indie films
 *	Actors and directors from underrepresented regions may be penalized due to lower historical revenue (a systemic bias)    
 * This could perpetuate a cycle where studios continue to invest only in "proven" (i.e., Western, male, English-speaking) talent, reinforcing existing disparities.  
-* To mitigate this, stakeholders should use the model as a decision-support tool, not a gatekeeper, and actively consider diverse voices in greenlighting decisions.
+* To mitigate this, suggest stakeholders should use the model only as a decision-support tool and actively consider diverse voices in greenlighting decisions.
 ##### Accuracy
 * The Random Forest model achieves an R² of 0.918 on the test set, indicating high predictive accuracy. However, accuracy does not imply truth as the model reflects historical patterns, including market inefficiencies and biases.
 * Predictions for low-budget, international, or niche films may be less accurate due to sparse data.
@@ -163,17 +160,16 @@ The model may systematically favor certain groups due to historical biases in th
 * The feature engineering process is fully documented, including how director_target_enc and star1_target_enc were created using cross-validated target encoding to prevent leakage.
 * Feature importance analysis (top 3: log_budget, director_target_enc, star1_target_enc) provides insight into what drives predictions.
 * An interactive ipywidget interface was developed to allow users to simulate changes and understand model behavior — promoting interpretability.
-However, Random Forest is not fully interpretable like linear models. Therefore, we emphasize global explanations over individual predictions and avoid presenting results as infallible.
-
+However, Random Forest is not fully interpretable like linear models.
 
 ## Conclusion  
-This project successfully developed a model to predict box office revenue using pre-release features. By leveraging feature engineering and avoiding data leakage, We built a tool that can guide budgeting and marketing strategies to increase revenue by 5% or more.
+This project successfully developed a model to predict box office revenue using pre-release features. By leveraging feature engineering and avoiding data leakage, I have built a tool that can guide budgeting and marketing strategies to increase revenue by 5% or more.
 
 The final recommendation is to deploy the Random Forest model in a decision-support dashboard, enabling studios to:
 
-Simulate outcomes for new projects
-Compare scripts based on cast, genre, director and budget
-Optimize investments with data-backed confidence
+* Simulate outcomes for new movie project
+* Compare scripts based on cast, genre, director and budget
+* Optimize investments with data-backed confidence
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
