@@ -79,7 +79,8 @@ Note: Metrics are on log-transformed revenue. Higher R² = better fit.
 Best Performer: Random Forest achieved the highest R² (0.918) and lowest RMSE/MAE  
 
 Actual vs Predicted Revenue (Sample)
-<img width="1431" height="874" alt="image" src="https://github.com/user-attachments/assets/77c76039-21a1-4c74-97eb-f10d0348440b" />
+<img width="1431" height="874" alt="image" src="https://github.com/user-attachments/assets/77c76039-21a1-4c74-97eb-f10d0348440b" />  
+
 Refering to sample 2, Predicted Revenue $183,632,568 vs Actual Revenue $114,629,169 
  
 The model captures trends well, especially for mid-to-high-revenue films. 
@@ -97,8 +98,6 @@ Key Insights:
 This confirms that budget and director success are the strongest drivers of revenue. 
 
 ## Recommendation and Analysis
-
-Recommended Model  
 Random Forest Regressor is the best-performing model and should be used for deployment. 
 Despite Linear Regression's simplicity, Random Forest outperforms across all metrics with:
 *	Higher R² (0.918)
