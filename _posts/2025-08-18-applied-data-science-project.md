@@ -133,8 +133,8 @@ This provides a clear, data-backed strategy for studios.
 
 ## AI Ethics
  
-While the model provides reasonable predication and valuable insights, we must consider ethical implications:  
-  
+While the model provides reasonable predication and valuable insights, we must consider ethical implications:
+
 ##### Privacy  
 * The dataset used contains publicly available metadata about movies (e.g., director, cast, genre, budget) sourced from platforms Kaggle.
 * No personal or sensitive user data (e.g., audience demographics, viewing habits, or private financial records) was used.
@@ -149,7 +149,6 @@ The model may systematically favor certain groups due to historical biases in th
 ##### Accuracy
 * The Random Forest model achieves an R² of 0.918 on the test set, indicating high predictive accuracy. However, accuracy does not imply truth as the model reflects historical patterns, including market inefficiencies and biases.
 * Predictions for low-budget, international, or niche films may be less accurate due to sparse data.
-
 ##### Accountability
 * The team maintains full documentation of data sources, preprocessing steps, model selection, and assumptions.
 * A time-based train-test split was used to simulate real-world forecasting, ensuring the model is evaluated fairly and its performance reflects realistic deployment conditions.
