@@ -135,7 +135,7 @@ This provides a clear, data-backed strategy for studios.
  
 While the model provides reasonable predication and valuable insights, we must consider ethical implications:  
   
-##### Privacy
+##### Privacy  
 * The dataset used contains publicly available metadata about movies (e.g., director, cast, genre, budget) sourced from platforms Kaggle.
 * No personal or sensitive user data (e.g., audience demographics, viewing habits, or private financial records) was used.
 * All features are aggregated at the movie level, not individual level, minimizing privacy risks.
@@ -145,7 +145,7 @@ The model may systematically favor certain groups due to historical biases in th
 *	The model favors Hollywood-centric features (US production, English language), which may undervalue international or indie films
 *	Actors and directors from underrepresented regions may be penalized due to lower historical revenue (a systemic bias)    
 * This could perpetuate a cycle where studios continue to invest only in "proven" (i.e., Western, male, English-speaking) talent, reinforcing existing disparities.  
-* To mitigate this, suggest stakeholders should use the model only as a decision-support tool and actively consider diverse voices in greenlighting decisions.
+* To mitigate this, suggest stakeholders should use the model only as a decision-support tool and actively consider diverse voices in greenlighting decisions.  
 ##### Accuracy
 * The Random Forest model achieves an R² of 0.918 on the test set, indicating high predictive accuracy. However, accuracy does not imply truth as the model reflects historical patterns, including market inefficiencies and biases.
 * Predictions for low-budget, international, or niche films may be less accurate due to sparse data.
