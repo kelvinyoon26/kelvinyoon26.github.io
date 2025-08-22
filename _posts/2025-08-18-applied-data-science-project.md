@@ -51,22 +51,22 @@ Preprocessing Steps
 4.	Removed Leaky Features:
 *	Excluded: vote_average, IMDB_Rating, popularity, tagline, homepage, etc.
 
-###### Final Features for training
+##### Final Features for training
 <img width="1631" height="1102" alt="image" src="https://github.com/user-attachments/assets/e9af1649-5300-43f5-8149-5af97260908e" />
 
 ### Modelling
-Time-Based Train-Test Split
+Time-Based Train-Test Split  
 To simulate real-world forecasting:  
 <img width="1183" height="565" alt="image" src="https://github.com/user-attachments/assets/8811af5c-3588-496f-ab5e-944e3819d140" />
-* Ensures no future data leaks into training
-* Models learn from past to predict future just like in production  
   
-Models Trained
+Predict revenue for a new and upcoming movie using only data from movies released before it. Hence, the model should only train on older data, and test on newer data. This is to prevent time leakage: the model learns from future data to predict the past, which is unrealistic.
+  
+###### Models Trained  
 Four regression models were compared:
 *	Linear Regression – Baseline
 *	Random Forest Regressor
 *	Gradient Boosting Regressor
-*	XGBoost Regressor  
+*	XGBoost Regressor    
 All models used 80% training / 20% testing split and were trained on the same preprocessed 28 features.
 
 
