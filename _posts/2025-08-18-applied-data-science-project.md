@@ -170,5 +170,5 @@ The final recommendation is to deploy the Random Forest model in a decision-supp
 * Optimize investments with data-backed confidence
 
 ## Source Codes and Datasets
-- [GitHub Repository](https://github.com/kelvinyoon26/itd214_project)  
+- [https://github.com/kelvinyoon26/itd214_project]  
 - Dataset (file is too large to add into github):[Google Drive Link] (https://drive.google.com/file/d/1TNIDntM01KA4DLFZEDsFWgN_vVUW5bbx/view?usp=drive_link)
