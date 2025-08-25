@@ -57,7 +57,7 @@ Preprocessing Steps
 ### Modelling
 Time-Based Train-Test Split  
 To simulate real-world forecasting:  
-<img width="1183" height="565" alt="image" src="https://github.com/user-attachments/assets/8811af5c-3588-496f-ab5e-944e3819d140" />  
+<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/8811af5c-3588-496f-ab5e-944e3819d140" />  
 Predict revenue for a new and upcoming movie using only data from movies released before it. Hence, the model should only train on older data, and test on newer data. This is to prevent time leakage: the model learns from future data to predict the past, which is unrealistic.
   
 ##### Models Trained  
