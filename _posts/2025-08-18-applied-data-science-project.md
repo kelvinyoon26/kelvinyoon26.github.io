@@ -109,7 +109,8 @@ A base case movie was created using the mean of test set features:
 * Predicted Revenue: $32,296    
 
 Simulation result to evaluate the impact:
-  <img width="940" height="466" alt="image" src="https://github.com/user-attachments/assets/a7eab7ae-ee1c-4bdd-a549-9c464921157b" />
+ <img width="936" height="513" alt="image" src="https://github.com/user-attachments/assets/0e746524-020b-476c-acff-858aebde1eb5" />
+
  
 Key Insight: A 10% increase in log-transformed budget had the largest positive impact on revenue among all tested changes. Which meaning a 10% increase in budget leads to a 30.3% increase in predicted revenue which is far exceeding the 5% goal.  
 
