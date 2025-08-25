@@ -52,7 +52,7 @@ Preprocessing Steps
 *	Excluded: vote_average, IMDB_Rating, popularity, tagline, homepage, etc.
 
 ##### Final Features for training
-<img width="1631" height="1102" alt="image" src="https://github.com/user-attachments/assets/e9af1649-5300-43f5-8149-5af97260908e" />
+<img width="1631" height="1000" alt="image" src="https://github.com/user-attachments/assets/e9af1649-5300-43f5-8149-5af97260908e" />
 
 ### Modelling
 Time-Based Train-Test Split  
