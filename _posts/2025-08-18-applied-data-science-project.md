@@ -37,10 +37,10 @@ Dataset Overview
 *	Missing values in IMDB_Rating, Meta_score, etc.
 Preprocessing Steps
 1.	Filtered Data:  
- *	Removed movies with revenue ≤ 0 or budget ≤ 0
- *	Kept only movies with valid runtime, release_year, and non-null key features  
+    - Removed movies with revenue ≤ 0 or budget ≤ 0
+    - Kept only movies with valid runtime, release_year, and non-null key features  
 2.	Log Transformation:
- *	Applied np.log1p() to revenue and budget to normalize skewed distributions  
+    - Applied np.log1p() to revenue and budget to normalize skewed distributions  
 3.	Feature Engineering:
  *	Genres: One-hot encoded top 10 genres (e.g., Action, Drama)
  *	Production: Created is_us, num_languages, is_english
