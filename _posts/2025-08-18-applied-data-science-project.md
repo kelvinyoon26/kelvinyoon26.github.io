@@ -77,7 +77,7 @@ All models used 80% training / 20% testing split and were trained on the same pr
 5. Evaluation
 Model Performance (Test Set)
 
- <img width="940" height="292" alt="image" src="https://github.com/user-attachments/assets/49445130-44af-4662-a551-f820c1009adf" />
+ <img width="940" height="200" alt="image" src="https://github.com/user-attachments/assets/49445130-44af-4662-a551-f820c1009adf" />
   
 Note: Metrics are on log-transformed revenue. Higher R² = better fit. 
 Best Performer: Random Forest achieved the highest R² (0.918) and lowest RMSE/MAE  
