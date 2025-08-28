@@ -140,8 +140,8 @@ This provides a clear, data-backed strategy for studios.
 <img width="1672" height="552" alt="image" src="https://github.com/user-attachments/assets/cb72fa9c-f287-4b72-ad17-475fb02d02ac" />
 
 ## AI Ethics
+While the model provides reasonable predication and valuable insights, we must consider ethical implications:  
 
-While the model provides reasonable predication and valuable insights, we must consider ethical implications:
 ##### Privacy  
 * The dataset used contains publicly available metadata about movies (e.g., director, cast, genre, budget) sourced from platforms Kaggle.
 * No personal or sensitive user data (e.g., audience demographics, viewing habits, or private financial records) was used.
