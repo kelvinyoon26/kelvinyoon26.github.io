@@ -137,7 +137,7 @@ This aligns with industry knowledge:
 This provides a clear, data-backed strategy for studios.
 
 #### Ipywidget created for user to adjust the Top 3 feacture of importances to predict the revenue
-<img width="1672" height="552" alt="image" src="https://github.com/user-attachments/assets/cb72fa9c-f287-4b72-ad17-475fb02d02ac" />
+<img width="1372" height="452" alt="image" src="https://github.com/user-attachments/assets/cb72fa9c-f287-4b72-ad17-475fb02d02ac" />
 
 ## AI Ethics
 While the model provides reasonable predication and valuable insights, we must consider ethical implications:  
