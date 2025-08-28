@@ -36,20 +36,20 @@ Dataset Overview
 *	Skewed distributions in revenue and budget
 *	Missing values in IMDB_Rating, Meta_score, etc.
 Preprocessing Steps
-1.	Filtered Data:  
+1.  Filtered Data:
     - Removed movies with revenue ≤ 0 or budget ≤ 0
     - Kept only movies with valid runtime, release_year, and non-null key features  
 2.	Log Transformation:
     - Applied np.log1p() to revenue and budget to normalize skewed distributions  
 3.	Feature Engineering:
- *	Genres: One-hot encoded top 10 genres (e.g., Action, Drama)
- *	Production: Created is_us, num_languages, is_english
- *	Cast: Engineered cast_size, star_power, and avg_cast_revenue (target-encoded)
- *	Director & Star1: Used target encoding after replacing 'Unknown' with placeholders
- *	Budget Efficiency: Added budget_per_minute = log(budget) - log(runtime)
- *	Release Timing: Extracted release_month, release_dayofweek  
+    - Genres: One-hot encoded top 10 genres (e.g., Action, Drama)
+    - Production: Created is_us, num_languages, is_english
+    - Cast: Engineered cast_size, star_power, and avg_cast_revenue (target-encoded)
+    - Director & Star1: Used target encoding after replacing 'Unknown' with placeholders
+    - Budget Efficiency: Added budget_per_minute = log(budget) - log(runtime)
+    - Release Timing: Extracted release_month, release_dayofweek  
 4.	Removed Leaky Features:
- *	Excluded: vote_average, IMDB_Rating, popularity, tagline, homepage, etc.
+    - Excluded: vote_average, IMDB_Rating, popularity, tagline, homepage, etc.
 
 ##### Final Features for training
 <img width="1631" height="900" alt="image" src="https://github.com/user-attachments/assets/e9af1649-5300-43f5-8149-5af97260908e" />
