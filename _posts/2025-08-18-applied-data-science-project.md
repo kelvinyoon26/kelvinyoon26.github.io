@@ -123,7 +123,7 @@ This aligns with industry knowledge:
 * Director and Star Impact  
   Changing to a top-tier director (e.g., Christopher Nolan) increases revenue by 969% but this reflects a jump from a weak     base director. In reality, director changes have large but bounded impact but still director reputation is second only to    budget
 * Genre and Release Timing  
-  Adding 'Action' genre boosts revenue by only 0.01%, suggests it only have a slight impact.
+  Adding 'Action' genre boosts revenue by only 0.01%, suggests it only have a slight impact.  
   Release month has negligible impact, suggests timing is less critical than content and budget
   
 #### To achieve the 5% revenue increase goal:
