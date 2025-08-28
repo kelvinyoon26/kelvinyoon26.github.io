@@ -123,14 +123,17 @@ This aligns with industry knowledge:
 * Director and Star Impact  
   Changing to a top-tier director (e.g., Christopher Nolan) increases revenue by 969% but this reflects a jump from a weak     base director. In reality, director changes have large but bounded impact but still director reputation is second only to    budget
 * Genre and Release Timing  
-  Adding 'Action' genre boosts revenue by 8.1% — confirms its broad appeal
-  Release month has negligible impact — suggests timing is less critical than content and budget
+  Adding 'Action' genre boosts revenue by only 0.01%, suggests it only have a slight impact.
+  Release month has negligible impact, suggests timing is less critical than content and budget
   
 #### To achieve the 5% revenue increase goal:
 
 * Increase budget by just 1.5–2% → likely to yield >5% revenue gain
 * Combine with Action genre or strong director for amplified effect  
 This provides a clear, data-backed strategy for studios.
+
+#### Ipywidget created for user to adjust the Top 3 feacture of importances to predict the revenue
+<img width="1672" height="552" alt="image" src="https://github.com/user-attachments/assets/cb72fa9c-f287-4b72-ad17-475fb02d02ac" />
 
 ## AI Ethics
  
