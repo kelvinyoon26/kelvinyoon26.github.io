@@ -35,7 +35,8 @@ Dataset Overview
 *	High cardinality in Director, Star1, production_companies
 *	Skewed distributions in revenue and budget
 *	Missing values in IMDB_Rating, Meta_score, etc.  
-Preprocessing Steps  
+
+Preprocessing Steps
 1.  Filtered Data:
     - Removed movies with revenue ≤ 0 or budget ≤ 0
     - Kept only movies with valid runtime, release_year, and non-null key features  
